@@ -117,7 +117,6 @@ test_img = read_reg_img(path_img[0])
 # save all images to single image npy file
 # save all vecs to single vec npy file
 ### This makes life easier if we ever need to restart this process later (if so, comment this block of code and uncomment np.load block)
-sg_img_list, sg_vec_list = next(input_gen(batch_size=10))
-#sg_img_list, sg_vec_list = next(input_gen(batch_size=10000))
+sg_img_list, sg_vec_list = next(input_gen(batch_size=10000))
 np.save(fpo+'/sg_img_list.npy', sg_img_list)
 np.save(fpo+'/sg_vec_list.npy', sg_vec_list)
